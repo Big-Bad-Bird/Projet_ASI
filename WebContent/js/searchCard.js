@@ -8,4 +8,21 @@ $('#cardEnergyId')[0].innerText="100 Energy";
 $('#cardAttackId')[0].innerText="17 Attack";
 $('#cardDefenceId')[0].innerText="80 Defence";
 
-
+$('#submit').click( function() {
+    $.ajax({
+        url: '/find',
+        type: 'get',
+        dataType: 'json',
+        name: $('#searchName'),
+        success: function(data) {
+        	$('#cardFamilyNameId')[0].innerText=data['family'];
+        	$('#cardImgId')[0].src=data['imgUrl'];
+        	$('#cardNameId')[0].innerText=data['name'];
+        	$('#cardDescriptionId')[0].innerText=data['description'];
+        	$('#cardHPId')[0].innerText=data['hp'];
+        	$('#cardEnergyId')[0].innerText=data['energy'];
+        	$('#cardAttackId')[0].innerText=data['attack'];
+        	$('#cardDefenceId')[0].innerText=data['defense'];
+         }
+    });   
+});

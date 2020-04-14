@@ -24,7 +24,8 @@ public class UserServices {
 	
 	public UserServices() {
 	}
-
+	
+	//Renvoie toutes les cartes
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/cards")
@@ -33,7 +34,8 @@ public class UserServices {
 		String cardsJson=this.dao.getCardsJson();	
 		return cardsJson;
 	}
-
+	
+	//Renvoie la carte trouvée par Id
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/card/{cardId}")
@@ -43,6 +45,7 @@ public class UserServices {
 		return Tools.toJsonString(this.dao.getCard(cardId));
 	}
 	
+	//Renvoie la carte trouvée par nom
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/find")
@@ -52,6 +55,7 @@ public class UserServices {
 		return jsonCard;
 	}
 	
+	//Ajoute une carte à la base de données
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/add")

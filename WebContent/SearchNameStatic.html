@@ -23,7 +23,7 @@
             <div class="column"></div>
             <div class="column"></div>
             <div class="column">
-                <form class="ui form" action="./getCard" method="GET" name="mySearch">
+                <form class="ui form" name="mySearch">
                     <h3 class="ui dividing header">Select the Card Name to Search</h3>
                     <div class="two fields">
                         <div class="field">
@@ -31,8 +31,8 @@
                         </div>
                         <div class="field">
                             <div class="ui transparent icon input">
-                                <input type="text" placeholder="Search..." name="search">
-                                <i class="search link icon"  onclick="mySearch.submit();"></i>
+                                <input type="text" placeholder="Search..." name="search" id="searchName">
+                                <i class="search link icon"  id="submit"></i>
                             </div>
                         </div>
                     </div>

@@ -28,7 +28,7 @@ public class ServletStatic extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.sendRedirect("searchCard.html");
+		response.sendRedirect("SearchNameStatic.html");
 
 		
 	}
